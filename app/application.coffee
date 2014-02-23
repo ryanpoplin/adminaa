@@ -7,7 +7,7 @@ class Application extends Backbone.Marionette.Application
     @on 'initialize:after', @startHistory
 
     model = new NumberModel
-    view = NumberView model: model
+    view = new NumberView model: model
     new NumberController model: model, view: view
 
     @addRegions mainRegion: '#main'
