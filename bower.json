@@ -1,0 +1,60 @@
+{
+  "name": "package-name",
+  "version": "1.7.0",
+
+  "main": "public/javascripts/app.js",
+
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+
+  "dependencies": {
+    "jquery": "~2.0.2",
+    "lodash": "~1.3.1",
+    "marionette": "~1.0.4"
+  },
+
+  "overrides": {
+    "backbone": {
+      "dependencies": {
+        "lodash": "*",
+        "jquery": "*"
+      },
+
+      "main": "backbone.js"
+    },
+
+    "marionette": {
+      "dependencies": {
+        "backbone.babysitter": "~0.0.6",
+        "backbone.wreqr": "~0.2.0",
+        "backbone": "~1.0.0",
+        "lodash": "*"
+      },
+
+      "main": "lib/core/backbone.marionette.js"
+    },
+
+    "backbone.babysitter": {
+      "main": "lib/backbone.babysitter.js",
+
+      "dependencies": {
+        "backbone": "*"
+      }
+    },
+
+    "backbone.wreqr": {
+      "main": "lib/backbone.wreqr.js",
+
+      "dependencies": {
+        "backbone": "*"
+      }
+    },
+
+    "lodash": {
+      "main": "lodash.js"
+    }
+  }
+}
