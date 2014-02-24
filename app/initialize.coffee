@@ -3,6 +3,7 @@
 Application = require 'application'
 
 jQuery ->
+  # Init go-to root object...
   application = new Application
   application.initialize()
 

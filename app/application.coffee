@@ -1,3 +1,4 @@
+Coffee = require('coffee')
 Router = require('router')
 IndexView = require('views/index-view')
 NodeTesting = require('node/node')
@@ -8,6 +9,7 @@ NumberView = require('views/number-view')
 NumberController = require('controllers/number-controller')
 ###
 
+# The go-to root of the application...
 class Application extends Backbone.Marionette.Application
   initialize: =>
     @on 'initialize:after', @startHistory
