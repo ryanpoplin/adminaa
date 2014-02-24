@@ -1,6 +1,6 @@
 {
   "author": "Ryan Poplin",
-  "name": "Nothing Special",
+  "name": "",
   "description": "Package description",
   "version": "1.7.0",
   "homepage": "",
@@ -25,7 +25,9 @@
     "uglify-js-brunch": ">= 1.0 < 1.7",
     "clean-css-brunch": ">= 1.0 < 1.7",
 
-    "handlebars-brunch": ">= 1.0 < 1.8"
+    "handlebars-brunch": ">= 1.0 < 1.8",
+    "express": "3.4.8",
+    "jade": "1.1.5"
   },
   "devDependencies": {
   }
