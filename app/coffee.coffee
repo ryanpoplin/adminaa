@@ -17,8 +17,6 @@ module.exports = (->
 
 	if true != true then console.log 'AHAHAHA!'
 
-		
-
 	proto = 
 		name: 'Byrdann'
 		age: 23
@@ -28,10 +26,13 @@ module.exports = (->
 		initialize: ->
 			console.log 'Programmer Model...'
 			return
+		defaults:
+			name: 'Programmer'
+			language: 'JavaScript'
 
 	programmer = new Programmer 
 
-
+	console.log programmer
 
 	return
 
