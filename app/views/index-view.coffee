@@ -2,7 +2,9 @@ module.exports = class IndexView extends Backbone.Marionette.ItemView
 	template: require('templates/number-template')
 	events:
 		'click #log-in': 'logInAdmin'
-	logInAdmin: ->
+	logInAdmin: (e) ->
+		e?.preventDefault()
+		# unless username 
 		username = $('#log-in-username').val()
 		password = $('#log-in-password').val()
 		Parse.User.logIn username, password,
