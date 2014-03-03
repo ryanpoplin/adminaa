@@ -1,60 +1,52 @@
 body {
-	font-family: 'Oswald', sans-serif;
-	background-color: #fefefe;
-	.container {
-		#logo {
-			text-align: center;
-			font-size: 1.3em;
-			font-weight: 100;
-			color: #10b5b8;
-			text-shadow: 1px 1px 1px #e0e0e0;
+
+	* {
+		font-family: 'Lato', sans-serif;
+		margin: 0;
+		padding: 0;
+		color: #10b5b8;
+	}
+
+	header {
+		text-align: center;
+		box-shadow: 0 1px 1px #e0e0e0;
+		font-size: 1.4em;
+		padding: 15px;
+		width: 100%;
+	}
+
+	section#log-in-form {
+		box-shadow: 0 1px 1px #e0e0e0;
+		padding: 35px;
+		width: 100%;
+		text-align: center;
+		input {
+			margin: 35px auto;
+			width: 220px;
+			font-size: 1.4em;
+			padding: 10px 20px 10px 20px;
+			display: block;
 		}
-		#login-form-area {
-			background-color: #fafafa;
-			box-shadow: 1px 2px 1px #e0e0e0;
-			border: 1px solid #e9e9e9;
-			border-radius: 4px;
-			margin: 0 auto;
-			padding: 15px 0;
-			width: 200px;
-			input[type=text] {
-				font-family: 'Oswald', sans-serif;
-				border-radius: 2px;
-				border: 1px solid #e9e9e9;
-				font-size: 0.8em;
-				padding: 10px;
-				display: block;
-				height: 10px;
-				width: 140px;
-				margin: 10px auto;
-			}
-			input[type=password] {
-				font-family: 'Oswald', sans-serif;
-				border-radius: 2px;
-				border: 1px solid #e0e0e0;
-				font-size: 0.8em;
-				padding: 10px;
-				display: block;
-				height: 10px;
-				width: 140px;
-				margin: 10px auto;
-			}
-			.log-in {
-				font-weight: 100;
-				box-shadow: 1px 2px 1px #c0c0c0;
-				font-family: 'Oswald', sans-serif;
-				cursor: pointer;
-				border: 1px solid #c0c0c0;
-				border-radius: 4px;
-				padding: 5px;
-				text-align: center;
-				width: 50px;
-				margin: 20px auto 0 auto;
-				display: block;
-				background-color: #10b5b8;
-				color: #fefefe;
-				font-size: 0.8em;
-			}
+		div#log-in {
+			cursor: pointer;
+			width: 100px;
+			padding: 20px;
+			font-size: 1.2em;
+			margin: 20px auto;
+			border: 1px solid #e0e0e0;
+			margin-bottom: 10px;
+			display: block;
 		}
 	}
+
+	footer {
+		box-shadow: 0 1px 1px #e0e0e0;
+		padding: 15px;
+		width: 100%;
+		p {	
+			text-align: center;		
+			font-size: 1.4em;
+		}
+	}
+
 }
