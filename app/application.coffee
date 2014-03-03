@@ -1,8 +1,10 @@
+'use strict'
+
 Parse = require('parse')
 
 Coffee = require('coffee')
 
-Router = require('router')
+# Router = require('router')
 
 IndexView = require('views/index-view')
 
@@ -10,11 +12,11 @@ NodeTesting = require('node/node')
 
 # Pagination = require('backbone-plugins/pagination')
 
-User = require('models/user-model')
+# User = require('models/user-model')
 
 # Users = require('collections/user-collection')
 
-UserItemView = require('views/user-view')
+# UserItemView = require('views/user-view')
 
 # NumberModel = require('models/number-model')
 # NumberView = require('views/number-view')
@@ -35,6 +37,8 @@ class Application extends Backbone.Marionette.Application
 
     # userItem = new UserItemView
     #   model: new User
+
+    
 
     view = new IndexView
 

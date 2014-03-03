@@ -1,10 +1,10 @@
+'use strict'
 module.exports = class IndexView extends Backbone.Marionette.ItemView
-	template: require('templates/number-template')
+	template: require('templates/index-template')
 	events:
 		'click #log-in': 'logInAdmin'
 	logInAdmin: (e) ->
 		e?.preventDefault()
-		# unless username 
 		username = $('#log-in-username').val()
 		password = $('#log-in-password').val()
 		Parse.User.logIn username, password,
@@ -12,6 +12,6 @@ module.exports = class IndexView extends Backbone.Marionette.ItemView
 				alert user.get("email") + ' you have been logged in...'
 				return
 			error: (user, error) -> 
-				alert 'An error has occured...'
+				alert 'Either you forgot your Username or Password, or you\'re a bastard...'
 				return
 		return
