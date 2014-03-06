@@ -23,34 +23,21 @@ NodeTesting = require('node/node')
 # NumberController = require('controllers/number-controller')
 
 # The go-to root of the application...
-class Application extends Backbone.Marionette.Application
-  initialize: =>
-    @on 'initialize:after', @startHistory
 
-    # model = new NumberModel
-    # view = new NumberView model: model
-    # new NumberController model: model, view: view
+module.exports = do ->
+  App = new Backbone.Marionette.Application()
 
-    # Pagination Example...
-    # pagingOne = new Pagination 10, new Users()
-    # pagingTwo = new Pagination 20, new Users()
-
-    # userItem = new UserItemView
-    #   model: new User
-
-    
+  App.on "initialize:after", (options)->
 
     view = new IndexView
-
     @addRegions mainRegion: '#main'
     @mainRegion.show view
 
-    @start()
+  App.on "initialize:before", (options = {}) ->
+    require("auth/module").start(options)
 
-    return
+  App.on "start", ->
+    Backbone.history.start()
 
-  startHistory: (options) => 
-  	Backbone.history.start()
-  	return
 
-module.exports = Application
+  App
