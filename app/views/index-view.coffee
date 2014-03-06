@@ -10,6 +10,9 @@ module.exports = class IndexView extends Backbone.Marionette.ItemView
 	logInAdmin: (e) ->
 		e?.preventDefault()
 
+		# TODO: look into rivets? 
+		# https://github.com/wmdmark/backbone-rivets-example/blob/master/tutorial.md
+
 		# Set the username/password from the form to the model
 		@model.set "username", $('#log-in-username').val()
 		@model.set "password", $('#log-in-password').val()
