@@ -1,5 +1,5 @@
 # Just utilize the http-server module for the 'specs' dir for now...
-(->
+(-> 
   log = ->
     try
       console.log.apply console, arguments
