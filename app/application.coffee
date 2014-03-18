@@ -1,18 +1,19 @@
-'use strict'
-
 Parse = require 'parse'
-
-# Router = require 'router' 
-
+# IndexModel = require 'models/index-model'
 IndexView = require 'views/index-view'
 
 class Application extends Backbone.Marionette.Application
   initialize: =>
     @on 'initialize:after', @startHistory
 
-    # This will need to be routed...
+    # Edit after this comment...
 
-    view = new IndexView
+    # Bad structure here is b/c I'm just testing around...
+
+    # model = new IndexModel
+    collection = new IndexCollection
+    # collection.add model
+    view = new IndexView 
 
     @addRegions mainRegion: '#main'
     @mainRegion.show view
